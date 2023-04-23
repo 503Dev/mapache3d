@@ -1,0 +1,49 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: flake8
+        name: flake8
+        entry: poetry run flake8
+        language: python
+        pass_filenames: false
+      - id: black
+        name: black
+        entry: poetry run black --check .
+        language: python
+        pass_filenames: false
+      - id: pyre
+        name: pyre
+        entry: poetry run pyre
+        language: python
+        pass_filenames: false
+      - id: tests
+        name: tests
+        entry: poetry run green
+        language: python
+        pass_filenames: false
+      - id: eslint
+        name: eslint
+        entry: yarn --cwd frontend/ lint
+        language: node
+        pass_filenames: false
+      - id: prettier
+        name: prettier
+        entry: yarn --cwd frontend/ run prettier --check src
+        language: node
+        pass_filenames: false
+      - id: tsc
+        name: tsc
+        entry: yarn --cwd frontend/ run tsc
+        language: node
+        pass_filenames: false
+      - id: webpack
+        name: webpack
+        entry: yarn --cwd frontend/ build
+        language: node
+        pass_filenames: false
+      - id: jest
+        name: jest
+        entry: yarn --cwd frontend/ test
+        language: node
+        pass_filenames: false

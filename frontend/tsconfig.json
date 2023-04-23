@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "outDir": "./.typescript/",
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

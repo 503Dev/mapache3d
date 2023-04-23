@@ -1,0 +1,10 @@
+{
+  "source_directories": [
+    ".",
+    "stubs/"
+  ],
+  "exclude": [
+    ".*\/dist\/.*"
+  ],
+  "strict": true
+}

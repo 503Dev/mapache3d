@@ -1,0 +1,22 @@
+*.egg-info/
+.DS_Store
+.coverage
+.pyre/
+.tox/
+.typescript
+.venv/
+__pycache__/
+coverage
+coverage.xml
+frontend/dist/
+frontend/node_modules/
+*.deb
+.direnv/
+
+dist/mariner-*
+dist/debian/.debhelper/
+dist/debian/mariner3d.debhelper.log
+dist/debian/mariner3d/
+
+# Sphinx
+_build/
