@@ -1,4 +1,4 @@
-🛰️ mmapache3d
+🛰️ mapache3d
 ==========
 
 |CI| |docs| |codecov| |Python| |MIT license|
