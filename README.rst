@@ -65,3 +65,6 @@ Elegoo Mars Pro.
 .. |MIT license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://luizribeiro.mit-license.org/
 .. |Screenshot| image:: /docs/_static/screenshot.png
+
+Poetry Fix for Keyring:
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring

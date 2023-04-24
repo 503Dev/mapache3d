@@ -4,6 +4,7 @@ from typing import Sequence
 
 from flask import Flask
 from flask_wtf.csrf import CSRFProtect
+# from flask_cors import CORS 
 from whitenoise import WhiteNoise
 
 from mariner import config
@@ -28,6 +29,7 @@ app: Flask = Flask(
     template_folder=frontend_dist_directory,
     static_folder=frontend_dist_directory,
 )
+# CORS(app)
 csrf = CSRFProtect(app)
 # pyre-ignore[8]: incompatible attribute type
 app.wsgi_app = WhiteNoise(app.wsgi_app)

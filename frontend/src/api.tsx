@@ -54,7 +54,7 @@ export class API {
   async printStatus(): Promise<PrintStatusAPIResponse | undefined> {
     try {
       const response: AxiosResponse<PrintStatusAPIResponse> = await axios.get(
-        "api/print_status"
+        "api/print_status" 
       );
       return response.data;
     } catch (error) {
