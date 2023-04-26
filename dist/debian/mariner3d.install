@@ -1,2 +1,2 @@
-../frontend/dist/ opt/venvs/mariner3d
-../config.toml etc/mariner/
+../frontend/dist/ opt/venvs/mapache3d
+../config.toml etc/mapache/

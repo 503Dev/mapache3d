@@ -17,11 +17,11 @@ files_directory = "/mnt/usb_share"
 # The name which will be displayed for the printer in the UI. By default no
 # printer name is displayed. Uncomment this line and set it to whatever you
 # want if you want to show a name on the print status. Useful for people with
-# multiple printers running multiple instances of mariner.
+# multiple printers running multiple instances of mapache.
 #display_name = "Elegoo Mars Pro"
 
 # Serial port settings. Most of the time the default values are fine. This
-# is generally only helpful if you aren't running mariner on a Raspberry Pi
+# is generally only helpful if you aren't running mapache on a Raspberry Pi
 # or if you are running with a printer that uses a different baud rate.
 serial_port = "/dev/serial0"
 baudrate = 115200
@@ -29,7 +29,7 @@ baudrate = 115200
 [http]
 # Hostname or IP address (string) on which to listen. Default is 0.0.0.0, which
 # means "all IP addresses on this host". Note that listening on 0.0.0.0 assumes
-# that your mariner instance is running on a trusted network.
+# that your mapache instance is running on a trusted network.
 host = "0.0.0.0"
 # TCP port on which to listen
 port = 5100

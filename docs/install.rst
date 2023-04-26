@@ -1,8 +1,8 @@
 Installation Guide
 ==================
 
-This document will guide you through the process of setting up mariner with
-your printer: from the hardware setup, installing the mariner software, and
+This document will guide you through the process of setting up mapache with
+your printer: from the hardware setup, installing the mapache software, and
 setting up Linux to share files with the printer and use the serial port.
 
 .. note::

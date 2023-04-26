@@ -14,12 +14,12 @@ from flask import (
 from pyre_extensions import none_throws
 from werkzeug.utils import secure_filename
 
-from mariner import config
-from mariner.exceptions import MarinerException, UnexpectedPrinterResponse
-from mariner.file_formats import SlicedModelFile
-from mariner.file_formats.utils import get_file_extension, get_supported_extensions
-from mariner.printer import ChiTuPrinter, PrinterState
-from mariner.server.utils import (
+from mapache import config
+from mapache.exceptions import mapacheException, UnexpectedPrinterResponse
+from mapache.file_formats import SlicedModelFile
+from mapache.file_formats.utils import get_file_extension, get_supported_extensions
+from mapache.printer import ChiTuPrinter, PrinterState
+from mapache.server.utils import (
     read_cached_preview,
     read_cached_sliced_model_file,
     retry,
@@ -29,8 +29,8 @@ from mariner.server.utils import (
 api = Blueprint("api", __name__, url_prefix="/api")
 
 
-@api.errorhandler(MarinerException)
-def handle_mariner_exception(exception: MarinerException) -> Tuple[str, int]:
+@api.errorhandler(mapacheException)
+def handle_mapache_exception(exception: mapacheException) -> Tuple[str, int]:
     tb = traceback.TracebackException.from_exception(exception)
     return (
         jsonify(

@@ -1,5 +1,5 @@
 ---
-name: "Package mariner3d as .deb"
+name: "Package mapache3d as .deb"
 
 # yamllint disable-line rule:truthy
 on:
@@ -57,7 +57,7 @@ jobs:
 
       - name: Compute Debian package name
         run: >-
-          echo "DEBIAN_PKG_FILENAME=mariner3d_${{
+          echo "DEBIAN_PKG_FILENAME=mapache3d_${{
             env.DEBIAN_PKG_FULL_VERSION
           }}_armhf.deb" >> $GITHUB_ENV
 

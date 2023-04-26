@@ -6,7 +6,7 @@ from unittest import TestCase
 import png
 from pyexpect import expect
 
-from mariner.file_formats.photon import PhotonFile
+from mapache.file_formats.photon import PhotonFile
 
 
 class PhotonFileTest(TestCase):

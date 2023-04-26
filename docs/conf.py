@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "mariner"
+project = "mapache"
 copyright = "2021, Luiz Ribeiro"
 author = "Luiz Ribeiro"
 

@@ -6,7 +6,7 @@ from unittest import TestCase
 import png
 from pyexpect import expect
 
-from mariner.file_formats.fdg import FDGFile
+from mapache.file_formats.fdg import FDGFile
 
 
 class FDGFileTest(TestCase):

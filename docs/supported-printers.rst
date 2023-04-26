@@ -1,7 +1,7 @@
 Supported Printers
 ==================
 
-The following printers have been confirmed to work with mariner by our
+The following printers have been confirmed to work with mapache by our
 community:
 
 - Anycubic Photon
@@ -18,5 +18,5 @@ community:
 - Peopoly Phenom L
 - EPAX E10/X10
 
-More printers probably work with mariner without any changes to the software.
-Let us know if you succeed on using mariner with any other printers!
+More printers probably work with mapache without any changes to the software.
+Let us know if you succeed on using mapache with any other printers!

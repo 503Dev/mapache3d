@@ -13,10 +13,10 @@ frontend/node_modules/
 *.deb
 .direnv/
 
-dist/mariner-*
+dist/mapache-*
 dist/debian/.debhelper/
-dist/debian/mariner3d.debhelper.log
-dist/debian/mariner3d/
+dist/debian/mapache3d.debhelper.log
+dist/debian/mapache3d/
 
 # Sphinx
 _build/

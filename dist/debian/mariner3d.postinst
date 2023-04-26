@@ -4,7 +4,7 @@ set -e
 set -x
 
 configure() {
-  USER="mariner"
+  USER="mapache"
 
   if ! id -u "$USER" >/dev/null ; then
     adduser \
@@ -14,7 +14,7 @@ configure() {
       --disabled-login \
       --disabled-password \
       --no-create-home \
-      --gecos "mariner3d daemon" \
+      --gecos "mapache3d daemon" \
       "$USER"
   fi
 

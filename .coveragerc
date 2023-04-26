@@ -1,6 +1,6 @@
 [run]
 source =
-  mariner/
+  mapache/
 
 [report]
 exclude_lines =

@@ -3,26 +3,26 @@ Contributing
 
 .. highlight:: bash
 
-Contributions to mariner are welcome! Both code and documentation are hosted on
-our `GitHub repository <https://github.com/luizribeiro/mariner>`_.  If you
+Contributions to mapache are welcome! Both code and documentation are hosted on
+our `GitHub repository <https://github.com/luizribeiro/mapache>`_.  If you
 are not familiar with GitHub and Pull Requests, we recommend for you to read
 `GitHub's documentation
 <https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_.
 
 This document will guide you through setting up your development environment to
-:ref:`develop mariner itself <Development>` and
+:ref:`develop mapache itself <Development>` and
 :ref:`write documentation <Documentation>`.
 
 Before diving into the sections below, make sure you have a checkout of the
-`mariner git repository <https://github.com/luizribeiro/mariner>`_::
+`mapache git repository <https://github.com/luizribeiro/mapache>`_::
 
-   $ git clone https://github.com/luizribeiro/mariner.git
+   $ git clone https://github.com/luizribeiro/mapache.git
 
 
 Development
 -----------
 
-Mariner is developed largely on top of `Python <https://www.python.org/>`_,
+mapache is developed largely on top of `Python <https://www.python.org/>`_,
 `TypeScript <https://www.typescriptlang.org/>`_ and `React
 <https://reactjs.org/>`_.
 
@@ -44,18 +44,18 @@ environment setup with all the required Python dependencies with ``poetry``::
 Backend
 ~~~~~~~
 
-The mariner backend code is responsible for serving HTTP requests from the
+The mapache backend code is responsible for serving HTTP requests from the
 frontend and communicating with the printer. It's the core of everything and
-written in Python. All of the code is within the ``mariner`` directory of the
+written in Python. All of the code is within the ``mapache`` directory of the
 Git repository.
 
-If you would like to run mariner locally, you can do so with the following
+If you would like to run mapache locally, you can do so with the following
 command::
 
-   $ poetry run mariner
+   $ poetry run mapache
 
 .. note::
-   Before running mariner locally, you will want to build the frontend's static
+   Before running mapache locally, you will want to build the frontend's static
    resources first. Make sure to follow the instructions from the :ref:`Frontend
    <Frontend>` section below.
 
@@ -78,7 +78,7 @@ In addition to running tests, you will want to make sure your code:
 * Is type-checked with `pyre <https://pyre-check.org/>`_: ``poetry run pyre``
 
 If you are not familiar with Python type-checking it is recommended for you to
-get familiarized with it first, as the mariner code is `strictly typed
+get familiarized with it first, as the mapache code is `strictly typed
 <https://pyre-check.org/docs/types-in-python/#strict-mode>`_. `PEP 484
 <https://www.python.org/dev/peps/pep-0484/>`_ offers a good overview of the
 basic functionality and the ``typing`` `module documentation
@@ -88,7 +88,7 @@ basic functionality and the ``typing`` `module documentation
 Frontend
 ~~~~~~~~
 
-The mariner frontend code is largely written in `TypeScript
+The mapache frontend code is largely written in `TypeScript
 <https://www.typescriptlang.org/>`_ with `React <https://reactjs.org/>`_. Most
 of the frontend is built with `Material-UI <https://material-ui.com/>`_
 components. HTTP requests are made to the backend API endpoints with `Axios
@@ -101,13 +101,13 @@ into that directory and install the JS dependencies with::
 
    $ yarn install
 
-In order to run ``mariner`` locally, you will want to package the frontend code
+In order to run ``mapache`` locally, you will want to package the frontend code
 into a static resource that can be served by the backend. Do this with::
 
    $ yarn build
 
 If successful, a ``main.js`` will be generated under the ``dist`` directory.
-Now you should be able to run mariner locally with ``poetry run mariner`` as
+Now you should be able to run mapache locally with ``poetry run mapache`` as
 described on the :ref:`Backend <Backend>` section.
 
 You can run the frontend tests with the following command::
@@ -137,12 +137,12 @@ requests with a `GitHub Action <https://docs.github.com/en/actions>`_. However,
 you can also automatically run those locally before every commit you make with
 `pre-commit <https://pre-commit.com/>`_. See pre-commit's `installation instructions
 <https://pre-commit.com/#installation>`_ for more information. Once you have
-``pre-commit`` installed, setup the mariner hook by running this from your local
+``pre-commit`` installed, setup the mapache hook by running this from your local
 repository::
 
    $ pre-commit install
 
-Once the pre-commit hook is installed, any commits to your local mariner
+Once the pre-commit hook is installed, any commits to your local mapache
 repository will automatically run all backend and frontend checks that would be
 run on the GitHub Action.
 
@@ -150,8 +150,8 @@ run on the GitHub Action.
 Documentation
 -------------
 
-All of mariner's documentation (including this document!) is hosted on the
-mariner repository itself under the ``docs/`` directory. We use `Read the Docs
+All of mapache's documentation (including this document!) is hosted on the
+mapache repository itself under the ``docs/`` directory. We use `Read the Docs
 <https://readthedocs.org/>`_ to host our documentation, which is formatted with
 `reStructuredText
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_.
@@ -161,7 +161,7 @@ the GitHub UI itself and submit those as Pull Requests without requiring any
 local development.
 
 You can also make changes to the documentation and preview them locally. All you
-need is a local checkout of the ``mariner`` repository from GitHub, `Python 3.7
+need is a local checkout of the ``mapache`` repository from GitHub, `Python 3.7
 (or newer) <https://www.python.org/downloads/>`_, and `Poetry
 <https://python-poetry.org/>`_ installed. For more information on that setup,
 refer to the :ref:`Backend` section as the instructions are the same.

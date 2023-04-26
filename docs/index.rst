@@ -1,9 +1,9 @@
-Welcome to the mariner documentation!
+Welcome to the mapache documentation!
 =====================================
 
-Mariner is a web interface for controlling MSLA 3D Printers based on `ChiTu
+mapache is a web interface for controlling MSLA 3D Printers based on `ChiTu
 controllers <https://www.chitusystems.com/>`_. These are controllers commonly
-used on 3D Printers by many brands such as Elegoo and Phrozen, making mariner
+used on 3D Printers by many brands such as Elegoo and Phrozen, making mapache
 compatible with a wide range of printers.
 
 |Screenshot|
@@ -12,7 +12,7 @@ compatible with a wide range of printers.
 Features
 --------
 
-Mariner provides the following features:
+mapache provides the following features:
 
 - Wide range of :ref:`supported MSLA 3D printers <Supported Printers>`.
 - Web interface with support for both desktop and mobile.

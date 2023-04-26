@@ -5,8 +5,8 @@ from unittest.mock import MagicMock, Mock, call, patch
 import serial
 from pyexpect import expect
 
-from mariner.exceptions import UnexpectedPrinterResponse
-from mariner.printer import ChiTuPrinter, PrinterState
+from mapache.exceptions import UnexpectedPrinterResponse
+from mapache.printer import ChiTuPrinter, PrinterState
 
 
 class ChiTuPrinterTest(TestCase):
@@ -19,7 +19,7 @@ class ChiTuPrinterTest(TestCase):
     def setUp(self) -> None:
         # pyre-fixme[16]: pyserial stubs aren't working
         self.serial_port_mock = Mock(spec=serial.Serial)
-        self.serial_port_patcher = patch("mariner.printer.serial.Serial")
+        self.serial_port_patcher = patch("mapache.printer.serial.Serial")
         serial_port_constructor = self.serial_port_patcher.start()
         serial_port_constructor.return_value = self.serial_port_mock
         self.printer = ChiTuPrinter()

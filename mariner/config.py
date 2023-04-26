@@ -8,8 +8,8 @@ import toml
 def __get_config_filename() -> Optional[str]:
     potential_paths: Sequence[Path] = [
         Path("config.toml"),
-        Path("~/.mariner/config.toml"),
-        Path("/etc/mariner/config.toml"),
+        Path("~/.mapache/config.toml"),
+        Path("/etc/mapache/config.toml"),
     ]
     try:
         path = next(
@@ -78,7 +78,7 @@ def get_http_port() -> int:
 
 
 def get_cache_directory() -> str:
-    default_directory = "/tmp/mariner/"
+    default_directory = "/tmp/mapache/"
     cache_config = _get_config().get("cache")
     if not isinstance(cache_config, dict):
         return default_directory

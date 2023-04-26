@@ -2,10 +2,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Discussions
-    url: https://github.com/luizribeiro/mariner/discussions
+    url: https://github.com/luizribeiro/mapache/discussions
     about: Please ask and answer questions here.
   - name: Troubleshooting
-    url: https://mariner.readthedocs.io/en/latest/troubleshooting.html
+    url: https://mapache.readthedocs.io/en/latest/troubleshooting.html
     about: >-
       Before filing an issue, please read the Troubleshooting section of
       the documentation.

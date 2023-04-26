@@ -24,7 +24,7 @@ For more details on the feature set, refer to our `Documentation
 Supported Printers
 ------------------
 
-Mariner supports a wide range of MSLA printers, including printers from the
+mapache supports a wide range of MSLA printers, including printers from the
 following manufacturers:
 
 - Anycubic
@@ -36,7 +36,7 @@ following manufacturers:
 - Voxelab
 
 Please refer to the list of `Supported Printers
-<https://mariner.readthedocs.io/en/latest/supported-printers.html>`_
+<https://mapache.readthedocs.io/en/latest/supported-printers.html>`_
 on our documentation for a full list of printer models that have been tested.
 If you have access to other printers and want to contribute, please open an
 issue.  We're happy to support more printers!
@@ -45,7 +45,7 @@ Documentation
 -------------
 
 The documentation is available from `Read the Docs
-<https://mariner.readthedocs.io/en/latest/>`_. It contains a lot of information
+<https://mapache.readthedocs.io/en/latest/>`_. It contains a lot of information
 from how to setup the hardware, install the software, troubleshoot issues, and
 how to contribute to development.
 
@@ -54,12 +54,12 @@ post <https://l9o.dev/posts/controlling-an-elegoo-mars-pro-remotely/>`__
 explains the setup end to end with pictures of the modifications done to an
 Elegoo Mars Pro.
 
-.. |CI| image:: https://github.com/luizribeiro/mariner/workflows/CI/badge.svg
-   :target: https://github.com/luizribeiro/mariner/actions/workflows/ci.yaml
-.. |docs| image:: https://readthedocs.org/projects/mariner/badge/?version=latest
-   :target: https://mariner.readthedocs.io/en/latest/?badge=latest
-.. |codecov| image:: https://codecov.io/gh/luizribeiro/mariner/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/luizribeiro/mariner
+.. |CI| image:: https://github.com/luizribeiro/mapache/workflows/CI/badge.svg
+   :target: https://github.com/luizribeiro/mapache/actions/workflows/ci.yaml
+.. |docs| image:: https://readthedocs.org/projects/mapache/badge/?version=latest
+   :target: https://mapache.readthedocs.io/en/latest/?badge=latest
+.. |codecov| image:: https://codecov.io/gh/luizribeiro/mapache/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/luizribeiro/mapache
 .. |Python| image:: https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue
    :target: https://www.python.org/downloads/
 .. |MIT license| image:: https://img.shields.io/badge/License-MIT-blue.svg

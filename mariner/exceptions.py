@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class MarinerException(Exception, ABC):
+class mapacheException(Exception, ABC):
     @abstractmethod
     def get_title(self) -> str:
         raise NotImplementedError
@@ -11,7 +11,7 @@ class MarinerException(Exception, ABC):
         raise NotImplementedError
 
 
-class UnexpectedPrinterResponse(MarinerException):
+class UnexpectedPrinterResponse(mapacheException):
     def __init__(self, response: str) -> None:
         self.response = response
 

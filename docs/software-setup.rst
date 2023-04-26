@@ -3,7 +3,7 @@ Software Setup
 
 Once your :doc:`hardware setup <hardware-setup>` done, you will have to:
 
-1. Install the ``mariner3d`` Debian package
+1. Install the ``mapache3d`` Debian package
 2. Setup the `USB Gadget driver
    <https://www.kernel.org/doc/html/latest/driver-api/usb/gadget.html>`_ so that
    the printer can see uploaded files
@@ -22,16 +22,16 @@ First, enable the repository:
    $ echo "deb https://ppa.l9o.dev/raspbian ./" | sudo tee /etc/apt/sources.list.d/l9o.list
    $ sudo apt update
 
-Then install mariner:
+Then install mapache:
 
 .. code-block:: bash
 
-   $ sudo apt install mariner3d
+   $ sudo apt install mapache3d
 
 USB Gadget Setup
 ----------------
 
-In order to make the printer see the files uploaded to mariner, we need to
+In order to make the printer see the files uploaded to mapache, we need to
 setup the `USB Gadget driver
 <https://www.kernel.org/doc/html/latest/driver-api/usb/gadget.html>`_ as a Mass
 Storage device. This section will guide you through that process.
@@ -77,7 +77,7 @@ Create the mount point for the container file:
 Add the following line to your ``/etc/fstab`` so the container file gets
 mounted on boot::
 
-   /piusb.bin /mnt/usb_share vfat users,gid=mariner,umask=002 0 2
+   /piusb.bin /mnt/usb_share vfat users,gid=mapache,umask=002 0 2
 
 Finally, make ``/etc/rc.local`` load the ``g_mass_storage`` module. If that file
 doesn't exist yet, create it with the following contents:

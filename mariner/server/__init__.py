@@ -6,11 +6,11 @@ from typing import Dict
 from flask import render_template
 from waitress import serve
 
-from mariner import config
-from mariner.file_formats.utils import get_supported_extensions
-from mariner.server.api import api as api_blueprint
-from mariner.server.app import app as flask_app
-from mariner.server.utils import (
+from mapache import config
+from mapache.file_formats.utils import get_supported_extensions
+from mapache.server.api import api as api_blueprint
+from mapache.server.app import app as flask_app
+from mapache.server.utils import (
     read_cached_preview,
     read_cached_sliced_model_file,
 )

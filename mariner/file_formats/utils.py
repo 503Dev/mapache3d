@@ -1,11 +1,11 @@
 import os
 from typing import Mapping, Set, Type
 
-from mariner.file_formats import SlicedModelFile
-from mariner.file_formats.ctb import CTBFile
-from mariner.file_formats.cbddlp import CBDDLPFile
-from mariner.file_formats.fdg import FDGFile
-from mariner.file_formats.photon import PhotonFile
+from mapache.file_formats import SlicedModelFile
+from mapache.file_formats.ctb import CTBFile
+from mapache.file_formats.cbddlp import CBDDLPFile
+from mapache.file_formats.fdg import FDGFile
+from mapache.file_formats.photon import PhotonFile
 
 
 EXTENSION_TO_FILE_FORMAT: Mapping[str, Type[SlicedModelFile]] = {

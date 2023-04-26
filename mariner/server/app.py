@@ -7,13 +7,13 @@ from flask_wtf.csrf import CSRFProtect
 # from flask_cors import CORS 
 from whitenoise import WhiteNoise
 
-from mariner import config
+from mapache import config
 
 
 def get_frontend_assets_path() -> str:
     potential_paths: Sequence[Path] = [
         Path("./frontend/dist/"),
-        Path("/opt/venvs/mariner3d/dist/"),
+        Path("/opt/venvs/mapache3d/dist/"),
     ]
     try:
         path = next(path for path in potential_paths if path.exists() and path.is_dir())

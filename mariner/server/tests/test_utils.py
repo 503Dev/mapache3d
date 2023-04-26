@@ -1,14 +1,14 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from mariner.server.utils import retry
+from mapache.server.utils import retry
 
 
 class RetryTest(TestCase):
     num_attempts: int = 0
 
     def setUp(self) -> None:
-        self.sleep_patcher = patch("mariner.server.utils.time.sleep")
+        self.sleep_patcher = patch("mapache.server.utils.time.sleep")
         self.sleep_patcher.start()
 
     def tearDown(self) -> None:

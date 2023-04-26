@@ -9,18 +9,18 @@ from pyexpect import expect
 from pyfakefs.fake_filesystem_unittest import TestCase
 from werkzeug.datastructures import FileStorage
 
-from mariner import config
-from mariner.exceptions import UnexpectedPrinterResponse
-from mariner.printer import (
+from mapache import config
+from mapache.exceptions import UnexpectedPrinterResponse
+from mapache.printer import (
     ChiTuPrinter,
     PrinterState,
     PrintStatus,
 )
-from mariner.server.app import app
-from mariner.server.utils import read_cached_sliced_model_file
+from mapache.server.app import app
+from mapache.server.utils import read_cached_sliced_model_file
 
 
-class MarinerServerTest(TestCase):
+class mapacheServerTest(TestCase):
     def setUp(self) -> None:
         path = (
             pathlib.Path(__file__).parent.parent.absolute()
@@ -51,7 +51,7 @@ class MarinerServerTest(TestCase):
         app.config["WTF_CSRF_ENABLED"] = False
 
         self.printer_mock = Mock(spec=ChiTuPrinter)
-        self.printer_patcher = patch("mariner.server.api.ChiTuPrinter")
+        self.printer_patcher = patch("mapache.server.api.ChiTuPrinter")
         printer_constructor_mock = self.printer_patcher.start()
         printer_constructor_mock.return_value = self.printer_mock
         self.printer_mock.__enter__ = Mock(return_value=self.printer_mock)
@@ -61,7 +61,7 @@ class MarinerServerTest(TestCase):
         # tests. this is important because during tests this function returns a Mock,
         # which pickle cannot serialize.
         self._read_ctb_file_patcher = patch(
-            "mariner.server.api.read_cached_sliced_model_file",
+            "mapache.server.api.read_cached_sliced_model_file",
             side_effect=read_cached_sliced_model_file.__wrapped__,
         )
         self._read_ctb_file_patcher.start()
@@ -385,26 +385,26 @@ class MarinerServerTest(TestCase):
         )
 
     def test_delete_file(self) -> None:
-        expect(os.path.exists(config.get_files_directory() / "mariner.ctb")).to_equal(
+        expect(os.path.exists(config.get_files_directory() / "mapache.ctb")).to_equal(
             False
         )
         self.fs.create_file(
-            "/mnt/usb_share/mariner.ctb", contents=self.ctb_file_contents
+            "/mnt/usb_share/mapache.ctb", contents=self.ctb_file_contents
         )
-        expect(os.path.exists(config.get_files_directory() / "mariner.ctb")).to_equal(
+        expect(os.path.exists(config.get_files_directory() / "mapache.ctb")).to_equal(
             True
         )
 
-        response = self.client.post("/api/delete_file?filename=mariner.ctb")
+        response = self.client.post("/api/delete_file?filename=mapache.ctb")
         expect(response.status_code).to_equal(200)
         expect(response.get_json()).to_equal({"success": True})
-        expect(os.path.exists(config.get_files_directory() / "mariner.ctb")).to_equal(
+        expect(os.path.exists(config.get_files_directory() / "mapache.ctb")).to_equal(
             False
         )
 
     def test_delete_file_that_is_not_file(self) -> None:
         with patch("os.remove") as remove_mock:
-            response = self.client.post("/api/delete_file?filename=mariner")
+            response = self.client.post("/api/delete_file?filename=mapache")
         remove_mock.assert_not_called()
         expect(response.status_code).to_equal(400)
 
@@ -414,7 +414,7 @@ class MarinerServerTest(TestCase):
 
     def test_get_index(self) -> None:
         with patch(
-            "mariner.server.render_template", return_value=""
+            "mapache.server.render_template", return_value=""
         ) as render_template_mock:
             response = self.client.get("/")
             render_template_mock.assert_called_with(

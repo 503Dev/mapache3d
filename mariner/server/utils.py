@@ -6,10 +6,10 @@ from typing import Callable, Type, TypeVar
 import png
 from flask_caching import Cache
 
-from mariner import config
-from mariner.file_formats import SlicedModelFile
-from mariner.file_formats.utils import get_file_format
-from mariner.server.app import app
+from mapache import config
+from mapache.file_formats import SlicedModelFile
+from mapache.file_formats.utils import get_file_format
+from mapache.server.app import app
 
 
 cache = Cache(app)

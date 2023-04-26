@@ -7,8 +7,8 @@ from typing import Match, Optional, Type
 
 import serial
 
-from mariner import config
-from mariner.exceptions import UnexpectedPrinterResponse
+from mapache import config
+from mapache.exceptions import UnexpectedPrinterResponse
 
 
 class PrinterState(Enum):

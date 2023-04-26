@@ -3,7 +3,7 @@ from pathlib import Path
 from pyexpect import expect
 from pyfakefs.fake_filesystem_unittest import TestCase
 
-from mariner import config
+from mapache import config
 
 
 class ConfigurationTest(TestCase):
@@ -21,20 +21,20 @@ class ConfigurationTest(TestCase):
         expect(config.get_http_host()).to_equal("0.0.0.0")
         expect(config.get_http_port()).to_equal(5050)
 
-        expect(config.get_cache_directory()).to_equal("/tmp/mariner/")
+        expect(config.get_cache_directory()).to_equal("/tmp/mapache/")
 
     def test_can_customize_files_directory(self) -> None:
         self.fs.create_file(
-            "/etc/mariner/config.toml",
+            "/etc/mapache/config.toml",
             contents="""
-files_directory = "/var/mariner"
+files_directory = "/var/mapache"
             """,
         )
-        expect(config.get_files_directory()).to_equal(Path("/var/mariner"))
+        expect(config.get_files_directory()).to_equal(Path("/var/mapache"))
 
     def test_can_customize_printer_settings(self) -> None:
         self.fs.create_file(
-            "/etc/mariner/config.toml",
+            "/etc/mapache/config.toml",
             contents="""
 [printer]
 display_name = "Elegoo Mars"
@@ -48,7 +48,7 @@ baudrate = 9600
 
     def test_can_customize_http_settings(self) -> None:
         self.fs.create_file(
-            "/etc/mariner/config.toml",
+            "/etc/mapache/config.toml",
             contents="""
 [http]
 host = "127.0.0.1"
@@ -60,10 +60,10 @@ port = 80
 
     def test_can_customize_cache_settings(self) -> None:
         self.fs.create_file(
-            "/etc/mariner/config.toml",
+            "/etc/mapache/config.toml",
             contents="""
 [cache]
-directory = "/dev/shm/mariner/"
+directory = "/dev/shm/mapache/"
             """,
         )
-        expect(config.get_cache_directory()).to_equal("/dev/shm/mariner/")
+        expect(config.get_cache_directory()).to_equal("/dev/shm/mapache/")

@@ -1,9 +1,9 @@
 [Unit]
-Description=mariner3d Printer Controller
+Description=mapache3d Printer Controller
 
 [Service]
-User=mariner
-ExecStart=/usr/bin/mariner
+User=mapache
+ExecStart=/usr/bin/mapache
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]

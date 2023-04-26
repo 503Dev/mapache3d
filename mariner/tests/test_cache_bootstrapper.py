@@ -2,12 +2,12 @@ import pathlib
 from unittest import TestCase
 from unittest.mock import call, patch, MagicMock
 
-from mariner.server import CacheBootstrapper
+from mapache.server import CacheBootstrapper
 
 
 class CacheBootstrapperTest(TestCase):
-    @patch("mariner.server.read_cached_sliced_model_file")
-    @patch("mariner.server.read_cached_preview")
+    @patch("mapache.server.read_cached_sliced_model_file")
+    @patch("mapache.server.read_cached_preview")
     def test_ctb_metadata_cache(
         self,
         read_cached_preview_mock: MagicMock,
@@ -17,7 +17,7 @@ class CacheBootstrapperTest(TestCase):
             pathlib.Path(__file__).parent.parent.absolute() / "file_formats" / "tests"
         )
 
-        with patch("mariner.config.get_files_directory", return_value=files_directory):
+        with patch("mapache.config.get_files_directory", return_value=files_directory):
             CacheBootstrapper().run()
 
         read_cached_sliced_model_file_mock.assert_has_calls(

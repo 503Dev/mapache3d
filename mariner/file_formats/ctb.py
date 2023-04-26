@@ -6,7 +6,7 @@ from typing import List
 import png
 from typedstruct import LittleEndianStruct, StructType
 
-from mariner.file_formats import SlicedModelFile
+from mapache.file_formats import SlicedModelFile
 
 
 @dataclass(frozen=True)

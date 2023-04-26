@@ -6,7 +6,7 @@ from unittest import TestCase
 import png
 from pyexpect import expect
 
-from mariner.file_formats.ctb import CTBFile
+from mapache.file_formats.ctb import CTBFile
 
 
 class CTBFileTest(TestCase):
